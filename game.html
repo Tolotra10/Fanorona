@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fanorona</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+</head>
+
+<body>
+    <h1 class="title">Fanorona</h1>
+    <div class="container">
+        <div class="table">
+            <button class="change_player">Hiova pilalao</button>
+            <div class="form1">
+                <input type="text" class="nameX" placeholder="  Anaran'ny pilalao (X)" maxlength="10"><br>
+                <button class="ok1">ok</button>
+            </div>
+            <div class="form2">
+                <input type="text" class="nameO" placeholder="  Anaran'ny pilalao (O)" maxlength="10"><br>
+                <button class="ok2">ok</button>
+            </div>
+            <table>
+                <tr>
+                    <th><p class="scoreX"> Pilalao</p><span>(X)</span></th>
+                    <th><p class="scoreO"> Pilalao </p><span>(O)</span></th>
+                </tr>
+                <tr>
+                    <td class="numberX"></td>
+                    <td class="numberO"></td>
+                </tr>
+            </table>
+            <a href="./index.html" class="quit"><<< Hiverina</a>
+        </div>
+
+        <div class="plateform">
+            <section id="game">
+                <div data-index="0" class="case"></div>
+                <div data-index="1" class="case"></div>
+                <div data-index="2" class="case"></div>
+                <div data-index="3" class="case"></div>
+                <div data-index="4" class="case"></div>
+                <div data-index="5" class="case"></div>
+                <div data-index="6" class="case"></div>
+                <div data-index="7" class="case"></div>
+                <div data-index="8" class="case"></div>
+            </section>
+            <div class="section">
+                <p class="result"></p>
+                <i id="clear" class="fas fa-recycle"></i>
+            </div>
+        </div>
+    </div>
+    <div class="game_over">
+        <div class="content">
+            <h2>TAPITRA</h2>
+            <p class="winner"></p>
+            <button class="reset">reset</button>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Fonorona by © Tolotra</p>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

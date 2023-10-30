@@ -1,0 +1,315 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background:linear-gradient(to top,#35796d,#265754); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 200px;
+}
+
+h1 {
+    margin-bottom: 4%;
+    font-family: cursive !important;
+    font-size: 6em;
+    color: #9bcf0d !important;
+}
+
+h2 {
+    margin-bottom: 2%;
+}
+
+.titre {
+    margin-top: 7%;
+    font-size: 4rem;
+}
+
+#jeu {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    width: 300px;
+    margin-top: 10%;
+    margin-right: 150px;
+}
+
+.plateform {
+    position: absolute;
+    right: 2rem;
+    top: 10rem;
+}
+
+.plateform.invisible {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.case {
+    border: 1px #000 solid;
+    height: 100px;
+    line-height: 100px;
+    padding-left: 25%;
+    font-size: 60px;
+}
+
+button {
+    margin-top: 25px !important;
+    background: none;
+    border: none;
+    font-size: 2.3em !important;
+    font-family: "fontawesome" !important;
+    padding: 0 1em 0 1em;
+    cursor: pointer;
+    color: #222222;
+    transition: 0.8s;
+    background-image: linear-gradient(to left, rgb(57, 214, 219) 0%, rgb(90, 223, 108) 100%);
+}
+
+button:hover {
+    transition: 0.8s;
+    transform: scale(1.4);
+    border: none !important;
+    outline: none !important;
+}
+
+.tableau {
+    position: absolute;
+    left: 2rem;
+    top: 5rem;
+}
+
+.same {
+    color: rgb(209, 209, 61);
+}
+
+.win {
+    color: green;
+}
+
+.terminer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 40%;
+    min-width: 100vw;
+    background-size: cover;
+    background-image: linear-gradient(to left, #000 0%, #fff 100%);
+    font-size: 4rem;
+    font-style: italic;
+    transition: 2s;
+    color: red;
+    visibility: hidden;
+    opacity: 0;
+    transition: 2s;
+}
+
+.terminer.visible {
+    position: absolute;
+    top: 40%;
+    background-image: linear-gradient(to left, #000 0%, #fff 100%);
+    font-size: 4rem;
+    font-style: italic;
+    transition: 2s;
+    color: red;
+    opacity: 1;
+    visibility: visible;
+}
+
+.terminer span {
+    font-size: 5rem;
+    color: red;
+}
+
+a {
+    text-decoration: none !important;
+    color: black !important;
+}
+
+.retour {
+    margin-top: 3%;
+    margin-left: 6%;
+    font-size: 4rem;
+    transition: 1s;
+}
+
+.retour:hover {
+    margin-left: 3%
+}
+
+tr,
+th,
+td {
+    padding: 5px;
+    border: 1px black solid
+}
+
+table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 130px;
+}
+
+th {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+td {
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.numberX,
+.numberO {
+    color: red;
+    text-shadow: 3px 1px 1px #222222;
+}
+
+.greenColor {
+    color: #9bcf0d;
+    text-shadow: 3px 1px 1px #222222;
+}
+
+.blueColor {
+    color: aquamarine;
+    text-shadow: 3px 1px 1px #222222;
+}
+
+.table {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50%;
+    margin-top: 100px;
+}
+
+.ok1,
+.ok2 {
+    font-size: 1rem !important;
+    margin: 0 .7rem !important;
+}
+
+.ok1:hover,
+.ok2:hover {
+    transform: none;
+}
+
+.nameO,
+.nameX {
+    margin: 0 .7rem;
+}
+
+.nameX,
+.ok1 {
+    visibility: visible;
+    opacity: 1;
+}
+
+.nameO,
+.ok2 {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.scoreX,
+.scoreO {
+    color: #222222;
+}
+
+.changePlayer {
+    background: none;
+    font-size: 1.5rem !important;
+    cursor: pointer;
+    color: #9bcf0d;
+    transform: none !important;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.changePlayer.visible {
+    visibility: visible;
+    opacity: 1;
+    border: none !important;
+    outline: none !important;
+}
+
+.changePlayer:hover {
+    color: #506b06;
+}
+
+@media (max-width:526px) {
+    html {
+        font-size: 60%;
+    }
+    .retour i {
+        position: absolute;
+        font-size: 2rem;
+        left: .5rem;
+        top: 3rem;
+    }
+    .header {
+        display: flex;
+        justify-content: center;
+    }
+    .titre {
+        font-size: 3rem !important;
+        margin-top: 2.2rem;
+        margin-left: 30px !important;
+    }
+    .container {
+        display: flex;
+        flex-direction: column !important;
+    }
+    .nameX,
+    .nameO {
+        width: 230px !important;
+        height: 30px;
+        font-size: 1.4rem;
+    }
+    .nameX::placeholder,
+    .nameO::placeholder {
+        font-size: 1.4rem;
+    }
+    .ok1,
+    .ok2 {
+        font-size: 2rem !important;
+    }
+    .table {
+        margin-left: 0 !important;
+    }
+    .changePlayer {
+        font-size: 2.5rem !important;
+        margin-top: 17% !important;
+    }
+    .plateform {
+        position: absolute;
+        left: 2rem;
+        top: 55rem;
+    }
+    #jeu {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        width: 250px !important;
+    }
+    .terminer {
+        top: 90% !important;
+        left: 0 !important;
+    }
+}
